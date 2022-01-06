@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\ClassProject.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{BF1852B1-B009-446A-9A50-6F046296BB79}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\ClassProject.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\ClassProjectEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{6538E482-7054-4484-AE92-05BE84B5829B}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\ClassProject">
+      <UniqueIdentifier>{38006BD5-43E3-483F-B202-5892E68ED85A}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\ClassProject\ClassProject.Build.cs">
+      <Filter>Source\ClassProject</Filter>
+    </None>
+    <Filter Include="Source\ClassProject\Private">
+      <UniqueIdentifier>{A9F4C9AF-FEBE-42B6-BB3C-2A4B1C69F796}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ClassProject\Private\ClassProject.cpp">
+      <Filter>Source\ClassProject\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ClassProject\Private\ClassProjectGameModeBase.cpp">
+      <Filter>Source\ClassProject\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ClassProject\Private\MyActor.cpp">
+      <Filter>Source\ClassProject\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ClassProject\Private\MyCharacter.cpp">
+      <Filter>Source\ClassProject\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ClassProject\Private\MyObject.cpp">
+      <Filter>Source\ClassProject\Private</Filter>
+    </ClCompile>
+    <Filter Include="Source\ClassProject\Private\Items">
+      <UniqueIdentifier>{20298187-E472-4F08-B009-3896F3FDC797}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ClassProject\Private\Items\MyItem.cpp">
+      <Filter>Source\ClassProject\Private\Items</Filter>
+    </ClCompile>
+    <Filter Include="Source\ClassProject\Public">
+      <UniqueIdentifier>{5C39FB76-6176-449D-BD5C-497A79F3F4BB}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\ClassProject\Public\ClassProject.h">
+      <Filter>Source\ClassProject\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ClassProject\Public\ClassProjectGameModeBase.h">
+      <Filter>Source\ClassProject\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ClassProject\Public\MyActor.h">
+      <Filter>Source\ClassProject\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ClassProject\Public\MyCharacter.h">
+      <Filter>Source\ClassProject\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ClassProject\Public\MyObject.h">
+      <Filter>Source\ClassProject\Public</Filter>
+    </ClInclude>
+    <Filter Include="Source\ClassProject\Public\Items">
+      <UniqueIdentifier>{FC948227-FA74-4064-B417-854B7F5375AC}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\ClassProject\Public\Items\MyItem.h">
+      <Filter>Source\ClassProject\Public\Items</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

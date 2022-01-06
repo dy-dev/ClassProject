@@ -1,0 +1,2 @@
+D:\Arcreane\Unreal\ISART\TestProject\ClassProject\Intermediate\Build\Win64\UE4Editor\Development\ClassProject\Definitions.ClassProject.h
+D:\Arcreane\Unreal\ISART\TestProject\ClassProject\Source\ClassProject\Public\ClassProject.h

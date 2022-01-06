@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "ClassProject",
+			"Path": "D:\\Arcreane\\Unreal\\ISART\\TestProject\\ClassProject\\Source\\ClassProject.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "ClassProjectEditor",
+			"Path": "D:\\Arcreane\\Unreal\\ISART\\TestProject\\ClassProject\\Source\\ClassProjectEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
