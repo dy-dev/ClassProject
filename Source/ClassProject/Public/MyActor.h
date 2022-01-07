@@ -15,8 +15,26 @@ public:
 	// Sets default values for this actor's properties
 	AMyActor();
 
-    UPROPERTY (VisibleAnywhere, Category ="ActorComponents")
+    UPROPERTY (BluePrintReadOnly, VisibleAnywhere, Category ="ActorComponents")
     UStaticMeshComponent* StaticMesh;
+
+    UPROPERTY(EditInstanceOnly, Category = "ActorComponents")
+    FVector InitialPosition;
+ 
+    UPROPERTY(EditInstanceOnly, Category = "ActorComponents")
+    FVector InitialDirection;
+ 
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "ActorComponents")
+    FVector DropPosition;
+
+    UPROPERTY(EditInstanceOnly, Category = "ActorComponents")
+        bool bTeleport;
+
+    UPROPERTY(EditInstanceOnly, Category = "ActorComponents")
+        bool bShouldMove;
+
+    UPROPERTY(EditInstanceOnly, Category = "ActorComponents")
+        float MovementSpeed;
 
 protected:
 	// Called when the game starts or when spawned

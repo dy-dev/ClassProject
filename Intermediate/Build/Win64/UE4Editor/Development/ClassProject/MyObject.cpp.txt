@@ -1,9 +1,0 @@
-D:\Arcreane\Unreal\ISART\TestProject\ClassProject\Intermediate\Build\Win64\UE4Editor\Development\ClassProject\Definitions.ClassProject.h
-D:\Arcreane\Unreal\ISART\TestProject\ClassProject\Source\ClassProject\Public\MyObject.h
-D:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/NoExportTypes.h
-D:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/PropertyAccessUtil.h
-D:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Core\Public\Math/UnitConversion.h
-D:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Core\Public\Math/UnitConversion.inl
-D:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Core\Public\Internationalization/PolyglotTextData.h
-D:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\AssetRegistry/ARFilter.h
-D:\Arcreane\Unreal\ISART\TestProject\ClassProject\Intermediate\Build\Win64\UE4Editor\Inc\ClassProject\MyObject.generated.h

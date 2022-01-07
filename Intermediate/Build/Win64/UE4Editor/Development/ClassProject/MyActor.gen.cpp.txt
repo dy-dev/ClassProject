@@ -1,5 +1,0 @@
-D:\Arcreane\Unreal\ISART\TestProject\ClassProject\Intermediate\Build\Win64\UE4Editor\Development\ClassProject\Definitions.ClassProject.h
-D:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
-D:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
-D:\Arcreane\Unreal\ISART\TestProject\ClassProject\Source\ClassProject/Public/MyActor.h
-D:\Arcreane\Unreal\ISART\TestProject\ClassProject\Intermediate\Build\Win64\UE4Editor\Inc\ClassProject\MyActor.generated.h

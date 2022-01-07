@@ -1,3 +1,0 @@
-D:\Arcreane\Unreal\ISART\TestProject\ClassProject\Intermediate\Build\Win64\UE4Editor\Development\ClassProject\Definitions.ClassProject.h
-D:\Arcreane\Unreal\ISART\TestProject\ClassProject\Source\ClassProject\Public\Items/MyItem.h
-D:\Arcreane\Unreal\ISART\TestProject\ClassProject\Intermediate\Build\Win64\UE4Editor\Inc\ClassProject\MyItem.generated.h
