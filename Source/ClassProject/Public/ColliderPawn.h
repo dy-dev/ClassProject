@@ -4,26 +4,16 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Pawn.h"
-#include "Critter.generated.h"
+#include "ColliderPawn.generated.h"
 
 UCLASS()
-class CLASSPROJECT_API ACritter : public APawn
+class CLASSPROJECT_API AColliderPawn : public APawn
 {
 	GENERATED_BODY()
 
 public:
 	// Sets default values for this pawn's properties
-	ACritter();
-
-    UPROPERTY(EditAnywhere, Category="Mesh")
-    class UStaticMeshComponent* StaticMeshComponent;
-    UPROPERTY(EditAnywhere, Category="Mesh")
-    class UCameraComponent* CameraComponent;
-
-    UPROPERTY(EditAnywhere, Category="Critter")
-    float MaxSpeed;
-
-
+	AColliderPawn();
 
 protected:
 	// Called when the game starts or when spawned
@@ -36,10 +26,4 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-
-    void MoveVertical(float InValue);
-    void MoveHorizontal(float InValue);
-
-private:
-    FVector CurrentVelocity;
 };
