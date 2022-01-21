@@ -16,7 +16,7 @@ public:
 	ACritter();
 
     UPROPERTY(EditAnywhere, Category="Mesh")
-    class UStaticMeshComponent* StaticMeshComponent;
+    class USkeletalMeshComponent* SkeletalMeshComponent;
     UPROPERTY(EditAnywhere, Category="Mesh")
     class UCameraComponent* CameraComponent;
 

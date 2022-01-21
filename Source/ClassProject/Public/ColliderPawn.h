@@ -15,6 +15,18 @@ public:
 	// Sets default values for this pawn's properties
 	AColliderPawn();
 
+    UPROPERTY(EditAnywhere, Category = "Mesh")
+        class USphereComponent* SphereComponent;
+    UPROPERTY(EditAnywhere, Category = "Mesh")
+        class UStaticMeshComponent* StaticMeshComponent;
+  //  UPROPERTY(EditAnywhere, Category = "Mesh")
+   //     class USkeletalMeshComponent* SkeletalMeshComponent;
+    UPROPERTY(EditAnywhere, Category = "Mesh")
+        class UCameraComponent* CameraComponent;
+
+    UPROPERTY(EditAnywhere, Category = "Critter")
+        float MaxSpeed;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -26,4 +38,9 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+    void MoveVertical(float InValue);
+    void MoveHorizontal(float InValue);
+
+private:
+    FVector CurrentVelocity;
 };

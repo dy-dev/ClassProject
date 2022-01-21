@@ -2,7 +2,7 @@
 
 
 #include "Critter.h"
-#include <Components/StaticMeshComponent.h>
+#include <Components/SkeletalMeshComponent.h>
 #include <Camera/CameraComponent.h>
 
 // Sets default values
@@ -11,15 +11,15 @@ ACritter::ACritter()
  	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
     RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("RootComponent"));
-    StaticMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("MeshComponent"));
-    StaticMeshComponent->SetupAttachment(GetRootComponent());
+    SkeletalMeshComponent = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("MeshComponent"));
+    SkeletalMeshComponent->SetupAttachment(GetRootComponent());
     
     CameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("CameraComponent"));
     CameraComponent->SetupAttachment(GetRootComponent());
     CameraComponent->SetRelativeLocation(FVector(-300,0,300));
     CameraComponent->SetRelativeRotation(FRotator(-45,0,0));
 
-    AutoPossessPlayer = EAutoReceiveInput::Player0;
+    AutoPossessPlayer = EAutoReceiveInput::Disabled;
 
     MaxSpeed = 650.f;
 }
