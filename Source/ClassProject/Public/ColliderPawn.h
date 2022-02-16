@@ -27,6 +27,10 @@ public:
     UPROPERTY(EditAnywhere, Category = "Critter")
         float MaxSpeed;
 
+
+    UPROPERTY(EditAnywhere, Category = "Mesh")
+        class USpringArmComponent* SpringArmComponent;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -41,6 +45,14 @@ public:
     void MoveVertical(float InValue);
     void MoveHorizontal(float InValue);
 
+
+    void PitchCamera(float InValue);
+    void YawCamera(float InValue);
+
+    virtual UPawnMovementComponent* GetMovementComponent() const override;
 private:
     FVector CurrentVelocity;
+    FVector2D CameraInput;
+
+    class UColliderMovementComponent* ColliderMovementComponent;
 };
