@@ -11,7 +11,7 @@ ACritter::ACritter()
  	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
     RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("RootComponent"));
-    SkeletalMeshComponent = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("MeshComponent"));
+    SkeletalMeshComponent = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("USkeletalMeshComponent"));
     SkeletalMeshComponent->SetupAttachment(GetRootComponent());
     
     CameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("CameraComponent"));
@@ -19,7 +19,7 @@ ACritter::ACritter()
     CameraComponent->SetRelativeLocation(FVector(-300,0,300));
     CameraComponent->SetRelativeRotation(FRotator(-45,0,0));
 
-    AutoPossessPlayer = EAutoReceiveInput::Disabled;
+    //AutoPossessPlayer = EAutoReceiveInput::Disabled;
 
     MaxSpeed = 650.f;
 }

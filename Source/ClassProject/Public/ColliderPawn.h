@@ -54,5 +54,5 @@ private:
     FVector CurrentVelocity;
     FVector2D CameraInput;
 
-    class UColliderMovementComponent* ColliderMovementComponent;
+    class UColliderMovementComponent* CustomColliderMovementComponent;
 };
