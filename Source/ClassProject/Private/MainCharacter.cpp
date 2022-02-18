@@ -87,7 +87,6 @@ void AMainCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 
 void AMainCharacter::LookupRate(float InValue)
 {
-	UE_LOG(LogTemp, Warning, TEXT("Lookup : %f"), InValue);
 	//BaseLookupRate is 65 ° by seconds, we have to multiply it by delta seconds and 
 	// by the speed ratio
 	AddControllerPitchInput(InValue * BaseLookupRate * GetWorld()->GetDeltaSeconds());
@@ -95,7 +94,6 @@ void AMainCharacter::LookupRate(float InValue)
 
 void AMainCharacter::TurnRate(float InValue)
 {
-	UE_LOG(LogTemp, Warning, TEXT("Turn : %f"), InValue);
 	AddControllerYawInput(InValue * BaseTurnRate * GetWorld()->GetDeltaSeconds());
 
 }
