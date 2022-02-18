@@ -23,7 +23,7 @@ AColliderPawn::AColliderPawn()
 	CustomColliderMovementComponent = CreateDefaultSubobject< UColliderMovementComponent>(TEXT("ColliderMovementComponent"));
 	CustomColliderMovementComponent->UpdatedComponent = GetRootComponent();
 	AutoPossessPlayer = EAutoReceiveInput::Player0;
-
+	MaxSpeed = 650.f;
 
 	StaticMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("StaticMeshComponent"));
 	ConstructorHelpers::FObjectFinder<UStaticMesh> MeshComponentAsset(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_Sphere.Shape_Sphere'"));
@@ -67,7 +67,7 @@ void AColliderPawn::Tick(float DeltaTime)
 
 	SetActorRotation(Rotation);
 	FRotator SpringArmRotation = SpringArmComponent->GetComponentRotation();
-	SpringArmRotation.Pitch += CameraInput.Y;
+	SpringArmRotation.Pitch = FMath::Clamp(SpringArmRotation.Pitch + CameraInput.Y, -80.f, -15.f);
 	SpringArmComponent->SetWorldRotation(SpringArmRotation);
 }
 
@@ -89,9 +89,9 @@ void  AColliderPawn::MoveVertical(float InValue)
 	//En faisant "Peek definition" sur AddMovementInput on s'apercoit qu'on appelle
 	//GetMovementComponent pour créer le movement mais le pawn n'a pas de movement
 	//component de base, c'est pour ca qu'on créer le notre
+	UE_LOG(LogTemp, Warning, TEXT("%f"), InValue);
 	if (CustomColliderMovementComponent)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("%f"), InValue);
 
 		CustomColliderMovementComponent->AddInputVector(FwdDirection * InValue * MaxSpeed, true);;
 	}
@@ -102,10 +102,10 @@ void  AColliderPawn::MoveHorizontal(float InValue)
 	FVector RightDirection = GetActorRightVector();
 	//AddMovementInput(InValue * RightDirection);
 
+	UE_LOG(LogTemp, Warning, TEXT("%f, %f"), InValue, MaxSpeed);
 
 	if (CustomColliderMovementComponent)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("%f, %f"), InValue, MaxSpeed);
 		CustomColliderMovementComponent->AddInputVector(RightDirection * InValue * MaxSpeed, true);;
 	}
 }
