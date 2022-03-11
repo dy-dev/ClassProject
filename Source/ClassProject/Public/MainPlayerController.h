@@ -7,34 +7,40 @@
 #include "MainPlayerController.generated.h"
 
 /**
- * 
+ *
  */
 UCLASS()
 class CLASSPROJECT_API AMainPlayerController : public APlayerController
 {
 	GENERATED_BODY()
-	
+
 
 public:
 	AMainPlayerController();
 	/** Reference to the UMG asset in editor*/
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Widgets")
 		TSubclassOf<class UUserWidget> HUDOverlayAsset;
-	
+
 	/** Variable referecing HUD widget once created*/
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Widgets")
 		UUserWidget* HudOverlayWidget;
 
+	/** Short Comments need to be added to ercxplain those information */
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Widgets")
-	float Health;
+		float Health;
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Widgets")
-	float MaxHealth;
+		float MaxHealth;
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Widgets")
-	float Stamina;
+		float Stamina;
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Widgets")
-	float MaxStamina;
+		float MaxStamina;
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Widgets")
-	int32 CoinsCount;
+		int32 CoinsCount;
+
+
+	void DecrementHealth(float Amount);
+	void Die();
+	void AddCoins(int32 Value);
 
 
 protected:

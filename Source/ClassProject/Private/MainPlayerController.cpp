@@ -28,3 +28,22 @@ void AMainPlayerController::BeginPlay()
 		HudOverlayWidget->SetVisibility(ESlateVisibility::Visible);
 	}
 }
+
+void AMainPlayerController::DecrementHealth(float Amount)
+{
+	Health -= Amount;
+	if (Health < 0)
+	{
+		Health = 0;
+		Die();
+	}
+}
+
+void AMainPlayerController::Die()
+{
+}
+
+void AMainPlayerController::AddCoins(int32 Value)
+{
+	CoinsCount += Value;
+}

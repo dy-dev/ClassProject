@@ -25,6 +25,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Movement")
 		APawn* Pawn;
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Movement")
+		class AMainCharacter* MainCharacter;
+
 	virtual void NativeInitializeAnimation() override;
 
 	UFUNCTION(BlueprintCallable, Category = "AnimationProperties")

@@ -43,7 +43,13 @@ AMainCharacter::AMainCharacter()
 	JumpZVelocity = 650.f;
 	AirControl = 0.2f;
 
+
+	MovementStatus = EMovementStatus::EMS_Normal;
+
+	RunningSpeed = 650.f;
+	SprintingSpeed = 950.f;
 }
+
 
 // Called when the game starts or when spawned
 void AMainCharacter::BeginPlay()
@@ -124,3 +130,21 @@ void AMainCharacter::MoveHorizontal(float value)
 	}
 }
 
+void AMainCharacter::SetMovementStatus(EMovementStatus Status)
+{
+	MovementStatus = Status;
+
+	switch (MovementStatus)
+	{
+	case EMovementStatus::EMS_Normal:
+		GetCharacterMovement()->MaxWalkSpeed = RunningSpeed;
+		break;
+	case EMovementStatus::EMS_Sprinting:
+		GetCharacterMovement()->MaxWalkSpeed = SprintingSpeed;
+		break;
+	case EMovementStatus::EMS_Max:
+		break;
+	default:
+		break;
+	}
+}

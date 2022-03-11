@@ -6,6 +6,15 @@
 #include "GameFramework/Character.h"
 #include "MainCharacter.generated.h"
 
+UENUM(BlueprintType)
+enum class EMovementStatus : uint8
+{
+	EMS_Normal UMETA(DisplayName="Normal"),
+	EMS_Sprinting UMETA(DisplayName = "Sprinting"),
+	EMS_Max UMETA(DisplayName = "Max")
+};
+
+
 UCLASS()
 class CLASSPROJECT_API AMainCharacter : public ACharacter
 {
@@ -35,7 +44,18 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		float AirControl;
 
-	
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Movement")
+		EMovementStatus MovementStatus;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Movement")
+		float RunningSpeed;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Movement")
+		float SprintingSpeed;
+
+
+	void SetMovementStatus(EMovementStatus Status);
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
